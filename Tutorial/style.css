@@ -1,0 +1,59 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family:'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+#cover {
+    position: absolute;
+    background-color: #080808;
+    color: antiquewhite;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+}
+
+#mainContent {
+    background-color: rgb(255, 190, 233);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.mainTextContent {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    font-size: 72px;
+    color: #5d1e50;
+}
+
+.mainTextContent2 {
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    font-size: 62px;
+    color: #5d1e50;
+}
+
+.first {
+    position: absolute;
+    font-size: 50px;
+    top: 40%;
+    left: 30%;
+    overflow: hidden;
+}
+
+span {
+    position: relative;
+}
+
+.second {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 62px;
+    overflow: hidden;
+}

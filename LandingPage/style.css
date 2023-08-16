@@ -41,12 +41,15 @@ img {
     height: 100px;
     overflow: hidden;
     left: -10%;
+    width: 0%;
     z-index: 999;
+    background-color: antiquewhite;
+    border-radius: 20px;
 }
 
 .text h1 {
     font-size: 5vw;
     position: absolute;
-
+    left: 40px;
     top: 45px;
 }
