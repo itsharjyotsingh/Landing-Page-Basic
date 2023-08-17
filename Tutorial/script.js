@@ -64,14 +64,12 @@ tl
         }
     })
 
-
 gsap.to("#mainTextContainer", {
     scrollTrigger: {
         trigger: "#mainTextContainer",
         scroller: "body",
-        start: "bottom 500px", 
-        end: "bottom 200px",
-        markers: true,
+        start: "top 50%",
+        end: "bottom 40%",
         scrub: 2,
     },
     width: "100%",
@@ -79,3 +77,18 @@ gsap.to("#mainTextContainer", {
     top: "0%",
     left: "0%",
 });
+
+
+
+gsap.from(".mainTextContent3", {
+    scrollTrigger: {
+        trigger: ".mainTextContent3",
+        scroller: "body",
+        start: "top 50%",
+        end: "bottom 30%",
+        markers: true,
+        scrub: 1,
+    },
+    opacity: 0,
+    y: 100,
+})
