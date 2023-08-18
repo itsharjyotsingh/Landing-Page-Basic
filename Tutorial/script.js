@@ -126,3 +126,8 @@ console.log(navItems)
             })
         }
     })
+
+        .to("#imageSpace", {
+            width: "550px",
+            duration: 0.5
+    })
