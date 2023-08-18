@@ -1,18 +1,10 @@
+// Timeline ****************************************************************************************************
+
 var tl = gsap.timeline();
 
-var string = "";
-var navItems = document.querySelectorAll(".navLinks");
-
-
-// navItems.forEach(element => {
-//     element.textContent = element.textContent.split("").join(`<span>${element}</span>`);
-// });
-
-console.log(navItems)
-
     tl
-    .from(".coverName", {
-        opacity: 0,
+    .to(".coverName", {
+        opacity: 1,
         onStart: function () {
             $(".coverName").textillate({
                 in: {
@@ -22,8 +14,8 @@ console.log(navItems)
         }
     })
 
-    .from(".coverTitle", {
-        opacity: 0,
+    .to(".coverTitle", {
+        opacity: 1,
         onStart: function () {
             $(".coverTitle").textillate({
                 in: {
@@ -33,8 +25,8 @@ console.log(navItems)
         }
     })
     
-    .from(".first", {
-        opacity: 0,
+    .to(".first", {
+        opacity: 1,
     onStart: function () {
             $(".first").textillate({
             in: {
@@ -50,9 +42,9 @@ console.log(navItems)
     }
 })
 
-    .from(".second", {
-    opacity: 0,
-        delay: 0.8,
+    .to(".second", {
+    opacity: 1,
+    delay: 0.8,
     onStart: function () {
         $(".second").textillate({
             in: {
@@ -68,8 +60,8 @@ console.log(navItems)
     }
     })
 
-    .from(".third", {
-        opacity: 0,
+    .to(".third", {
+        opacity: 1,
         delay: 0.8,
         onStart: function () {
             $(".third").textillate({
@@ -86,8 +78,8 @@ console.log(navItems)
         }
     })
 
-    .from(".fourth", {
-        opacity: 0,
+    .to(".fourth", {
+        opacity: 1,
         delay: 0.8,
         onStart: function () {
             $(".fourth").textillate({
@@ -99,27 +91,27 @@ console.log(navItems)
     })
     
         .to([".coverName", ".coverTitle", ".fourth"], {
-            delay: 0.5,
+            delay: 0.4,
             opacity: 0,
     })
 
     .to("#cover", {
         y: "-100%",
-        duration: 1
+        duration: 0.4
     })
 
-    .to([".navLinks", "#creativeHeadline", "#developerHeadline"], {
+    .to([".navLinks", ".creativeHeadline", ".developerHeadline"], {
         opacity: 1,
         duration: 0.5,
         y: 30,
         onStart: function () {
-            $("#creativeHeadline").textillate({
+            $(".creativeHeadline").textillate({
                 in: {
                     effect: 'flipInX',
                 }
             })
 
-            $("#developerHeadline").textillate({
+            $(".developerHeadline").textillate({
                 in: {
                     effect: 'flipInX',
                 }
@@ -127,7 +119,21 @@ console.log(navItems)
         }
     })
 
-        .to("#imageSpace", {
-            width: "550px",
-            duration: 0.5
+    .to("#imageSpace", {
+        width: "550px",
+        duration: 0.5
     })
+
+
+// Scroll Trigger ****************************************************************************************************
+
+gsap.to([".one", ".two"], {
+    scrollTrigger: {
+        trigger: ".one",
+        scroller: "body",
+        start: "top 0%",
+        end: "bottom -10%",
+        scrub: 1,
+    },
+    fontSize: "30px"
+})
