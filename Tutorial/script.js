@@ -1,9 +1,42 @@
 var tl = gsap.timeline();
 
-tl
+var string = "";
+var navItems = document.querySelectorAll(".navLinks");
+
+
+// navItems.forEach(element => {
+//     element.textContent = element.textContent.split("").join(`<span>${element}</span>`);
+// });
+
+console.log(navItems)
+
+    tl
+    .from(".coverName", {
+        opacity: 0,
+        onStart: function () {
+            $(".coverName").textillate({
+                in: {
+                    effect: 'bounceIn',
+                }
+            });
+        }
+    })
+
+    .from(".coverTitle", {
+        opacity: 0,
+        onStart: function () {
+            $(".coverTitle").textillate({
+                in: {
+                    effect: 'bounceIn',
+                }
+            });
+        }
+    })
+    
     .from(".first", {
+        opacity: 0,
     onStart: function () {
-        $(".first").textillate({
+            $(".first").textillate({
             in: {
                 effect: 'fadeInUp',
                 callback: function () {
@@ -19,7 +52,7 @@ tl
 
     .from(".second", {
     opacity: 0,
-    delay: 1,
+        delay: 0.8,
     onStart: function () {
         $(".second").textillate({
             in: {
@@ -35,60 +68,61 @@ tl
     }
     })
 
+    .from(".third", {
+        opacity: 0,
+        delay: 0.8,
+        onStart: function () {
+            $(".third").textillate({
+                in: {
+                    effect: 'fadeInUp',
+                    callback: function () {
+                        $(".third").textillate('out');
+                    }
+                },
+                out: {
+                    effect: 'fadeOutUp'
+                }
+            });
+        }
+    })
+
+    .from(".fourth", {
+        opacity: 0,
+        delay: 0.8,
+        onStart: function () {
+            $(".fourth").textillate({
+                in: {
+                    effect: 'fadeInUp',
+                },
+            });
+        }
+    })
+    
+        .to([".coverName", ".coverTitle", ".fourth"], {
+            delay: 0.5,
+            opacity: 0,
+    })
+
     .to("#cover", {
-        delay: '2',
         y: "-100%",
         duration: 1
     })
 
-    .from("#mainTextContainer", {
-        scale: 0.5,
-        opacity: 0,
-        duration: 0.3
-    })
-
-    .from([".mainTextContent",".mainTextContent2"], {
-        opacity: 0,
+    .to([".navLinks", "#creativeHeadline", "#developerHeadline"], {
+        opacity: 1,
+        duration: 0.5,
+        y: 30,
         onStart: function () {
-            $(".mainTextContent").textillate({
+            $("#creativeHeadline").textillate({
                 in: {
-                    effect: 'fadeInUp'
+                    effect: 'flipInX',
                 }
             })
 
-            $(".mainTextContent2").textillate({
+            $("#developerHeadline").textillate({
                 in: {
-                    effect: 'fadeInUp'
+                    effect: 'flipInX',
                 }
             })
         }
     })
-
-gsap.to("#mainTextContainer", {
-    scrollTrigger: {
-        trigger: "#mainTextContainer",
-        scroller: "body",
-        start: "top 50%",
-        end: "bottom 40%",
-        scrub: 2,
-    },
-    width: "100%",
-    height: "100%",
-    top: "0%",
-    left: "0%",
-});
-
-
-
-gsap.from(".mainTextContent3", {
-    scrollTrigger: {
-        trigger: ".mainTextContent3",
-        scroller: "body",
-        start: "top 50%",
-        end: "bottom 30%",
-        markers: true,
-        scrub: 1,
-    },
-    opacity: 0,
-    y: 100,
-})

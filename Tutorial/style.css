@@ -2,14 +2,39 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family:'Times New Roman', Times, serif;
-    background-color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-sizing: border-box;
+    background-color: #e1dfdd;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.border1 {
+    border:1px solid black;
+}
+
+.border2 {
+    border: 1px solid red;
+}
+
+.border3 {
+    border: 1px solid green;
 }
 
 #stickyContainer {
     position: relative;
-    height: 150vh;
+    background-color: #e1dfdd;
+    /* height: 100%; */
 }
 
 #cover {
@@ -25,59 +50,131 @@ body {
 #mainContent {
     position: sticky;
     top: 0px;
-    background-color: rgb(255, 190, 233);
+    background-color: #161616;
     width: 100%;
     height: 75%;
 }
 
+.coverName {
+    position: absolute;
+    top: 50px;
+    font-size: 140px;
+}
+
+.coverTitle {
+    position: absolute;
+    top: 250px;
+    font-weight: 300;
+    font-size: 100px;
+}
 
 .first {
     position: absolute;
-    font-size: 50px;
+    right: 2%;
+    bottom: 0%;
+    font-size: 120px;
     overflow: hidden;
 }
 
 .second {
     position: absolute;
-    font-size: 62px;
+    font-size: 120px;
+    right: 2%;
+    bottom: 20%;
+    overflow: hidden;
+}
+
+.third {
+    position: absolute;
+    font-size: 120px;
+    right: 2%;
+    bottom: 40%;
+    overflow: hidden;
+}
+
+.fourth {
+    position: absolute;
+    font-size: 120px;
+    right: 2%;
+    top: 0%;
     overflow: hidden;
 }
 
 #mainTextContainer {
-    width: 80%;
-    height: 80%;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 10%;
-    left: 10%;
-    background-color: whitesmoke;
+    top: 0%;
+    left: 0%;
+    background-color: #e1dfdd;
+    color: black;
+    display: flex;
+    justify-content: center;
 }
 
-.mainTextContent {
-    text-align: center;
-    font-size: 72px;
-    color: #5d1e50;
+#navBar {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 40%;
+    z-index: 2;
 }
 
-.mainTextContent2 {
-    text-align: center;
-    font-size: 62px;
-    color: #5d1e50;
+#stickyDiv {
+    position: fixed;
+    width: 90%;
+    height: 80px;
+    display: flex;
+    background-color: #e1dfdd;
+    justify-content: space-between;
 }
 
-.mainTextContent3 {
-    text-align: center;
-    margin-top: 20%;
-    font-size: 50px;
-    color: #5d1e50;
-    overflow: hidden;
-    opacity: 1;
+.navLinks {
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0;
 }
 
 #space {
-    height: 100vh;
-    background-color: aqua;
+    height: 300vh;
 }
 
-#space h1 {
-    opacity: 1;
+#headline {
+    position: absolute;
+    top: 100px;
+    font-size: 60px;
+    left: 5%;
+}
+
+#creativeHeadline {
+    margin: 0;
+    opacity: 0;
+}
+
+#developerHeadline {
+    margin-top: 0;
+    opacity: 0;
+}
+
+#imageSpace {
+    position: absolute;
+    bottom: 13%;
+    left: 5%;
+    height: 225px;
+    width: 550px;
+    overflow: hidden;
+}
+
+#imageSpace img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#visible {
+    position: absolute;
+    bottom: 13%;
+    left: 5%;
+    border: 1px solid white;
+    height: 200px;
+    width: 250px;
 }
