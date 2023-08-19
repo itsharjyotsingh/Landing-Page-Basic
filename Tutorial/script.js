@@ -99,6 +99,11 @@ var tl = gsap.timeline();
         y: "-100%",
         duration: 0.4
     })
+        
+        .to("#mainTextContainer", {
+            height: "100%",
+            duration: 0.4
+    })
 
     .to([".navLinks", ".creativeHeadline", ".developerHeadline"], {
         opacity: 1,
@@ -136,4 +141,38 @@ gsap.to([".one", ".two"], {
         scrub: 1,
     },
     fontSize: "30px"
+});
+
+gsap.to(".paras", {
+    y: 20,
+    stagger: 0.5,
+    opacity: 1,
+    scrollTrigger: {
+        trigger: "#top",
+        scroller: "body",
+        start: "top 70%",
+        end: "bottom 50%",
+    },
+});
+
+gsap.to("#firstProjectImage", {
+    y: -50,
+    scrollTrigger: {
+        trigger: "#firstProjectImage",
+        scroller: "body",
+        start: "top 70%",
+        end: "bottom 20%",
+        scrub: 1,
+    }
+})
+
+gsap.to("#firstProjectImage img", {
+    y: -400,
+    scrollTrigger: {
+        trigger: "#firstProjectImage img",
+        scroller: "body",
+        start: "top 70%",
+        end: "bottom 50%",
+        scrub: 2,
+    }
 })
