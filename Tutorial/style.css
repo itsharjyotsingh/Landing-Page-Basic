@@ -270,3 +270,8 @@ body {
     cursor: pointer;
     text-decoration: underline;
 }
+
+.projectDetails {
+    font-size: 22px;
+    font-weight: 100;
+}
