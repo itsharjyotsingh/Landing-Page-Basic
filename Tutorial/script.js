@@ -125,10 +125,56 @@ var tl = gsap.timeline();
     })
 
     .to("#imageSpace", {
-        width: "550px",
+        height: "225px",
         duration: 0.5
     })
 
+
+tl.to(["#firstProjectName", "#firstProjectDetails"],    {
+        opacity: 1,
+        onStart: function () {
+            $("#firstProjectName").textillate({
+                in: {
+                    effect: "fadeInUp",
+                },
+            });
+
+            $("#firstProjectDetails").textillate({
+                in: {
+                    effect: "fadeInUp",
+                }
+            });
+        },
+        scrollTrigger: {
+            trigger: ".firstProject",
+            scroller: "body",
+            start: "top 40%",
+            end: "bottom 20%",
+        }
+    });
+
+tl.to(["#secondProjectName", "#secondProjectDetails"], {
+        opacity: 1,
+        onStart: function () {
+            $("#secondProjectName").textillate({
+                in: {
+                    effect: "fadeInUp",
+                },
+            });
+
+            $("#secondProjectDetails").textillate({
+                in: {
+                    effect: "fadeInUp",
+                }
+            });
+        },
+        scrollTrigger: {
+            trigger: ".secondProject",
+            scroller: "body",
+            start: "top 40%",
+            end: "bottom 20%"
+        }
+    });
 
 // Scroll Trigger ****************************************************************************************************
 
@@ -172,7 +218,29 @@ gsap.to("#firstProjectImage img", {
         trigger: "#firstProjectImage img",
         scroller: "body",
         start: "top 70%",
-        end: "bottom 50%",
+        end: "bottom 40%",
+        scrub: 1
+    }
+})
+
+gsap.to("#secondProjectImage", {
+    y: -50,
+    scrollTrigger: {
+        trigger: "#secondProjectImage",
+        scroller: "body",
+        start: "top 70%",
+        end: "bottom 20%",
+        scrub: 1,
+    }
+})
+
+gsap.to("#secondProjectImage img", {
+    y: -400,
+    scrollTrigger: {
+        trigger: "#secondProjectImage img",
+        scroller: "body",
+        start: "top 70%",
+        end: "bottom 40%",
         scrub: 2,
     }
 })
