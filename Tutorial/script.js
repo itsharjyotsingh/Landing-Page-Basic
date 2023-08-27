@@ -102,7 +102,7 @@ var tl = gsap.timeline();
         
         .to("#mainTextContainer", {
             height: "100%",
-            duration: 0.4
+            duration: 0.1
     })
 
     .to([".navLinks", ".creativeHeadline", ".developerHeadline"], {
@@ -136,12 +136,14 @@ tl.to(["#firstProjectName", "#firstProjectDetails"],    {
             $("#firstProjectName").textillate({
                 in: {
                     effect: "fadeInUp",
+                    delayScale: 0.3
                 },
             });
 
             $("#firstProjectDetails").textillate({
                 in: {
                     effect: "fadeInUp",
+                    delayScale: 0.3
                 }
             });
         },
@@ -159,12 +161,14 @@ tl.to(["#secondProjectName", "#secondProjectDetails"], {
             $("#secondProjectName").textillate({
                 in: {
                     effect: "fadeInUp",
+                    delayScale: 0.3
                 },
             });
 
             $("#secondProjectDetails").textillate({
                 in: {
                     effect: "fadeInUp",
+                    delayScale: 0.3
                 }
             });
         },
@@ -213,7 +217,7 @@ gsap.to("#firstProjectImage", {
 })
 
 gsap.to("#firstProjectImage img", {
-    y: -400,
+    y: -50,
     scrollTrigger: {
         trigger: "#firstProjectImage img",
         scroller: "body",
@@ -235,12 +239,69 @@ gsap.to("#secondProjectImage", {
 })
 
 gsap.to("#secondProjectImage img", {
-    y: -400,
+    y: -50,
     scrollTrigger: {
         trigger: "#secondProjectImage img",
         scroller: "body",
         start: "top 70%",
         end: "bottom 40%",
         scrub: 2,
+    }
+})
+
+gsap.to("#aeromodelling", {
+    opacity: 1,
+    scrollTrigger: {
+        trigger: "#aeromodelling",
+        scroller: "body",
+        start: "top 40%",
+        end: "bottom 30%",
+    },
+    onStart: function () {
+        $("#aeromodelling").textillate({
+            in: {
+                effect: "fadeInUp",
+            }
+        })
+    }
+})
+
+gsap.to("#guitar", {
+    opacity: 1,
+    scrollTrigger: {
+        trigger: "#guitar",
+        scroller: "body",
+        start: "top 40%",
+        end: "bottom 30%",
+    },
+    onStart: function () {
+        $("#guitar").textillate({
+            in: {
+                effect: "fadeInUp",
+            }
+        })
+    }
+})
+
+gsap.to(["#games", "#thisone"], {
+    opacity: 1,
+    scrollTrigger: {
+        trigger: "#games",
+        scroller: "body",
+        start: "top 40%",
+        end: "bottom 30%",
+    },
+    onStart: function () {
+        $("#games").textillate({
+            in: {
+                effect: "fadeInUp",
+            }
+        })
+        $("#thisone").textillate({
+            in: {
+                effect: "flipInY",
+                delayScale: .5
+            }
+        })
     }
 })
