@@ -188,9 +188,9 @@ gsap.to([".one", ".two"], {
         scroller: "body",
         start: "top 0%",
         end: "bottom -10%",
-        scrub: 1,
+        scrub: 3,
     },
-    fontSize: "30px"
+    fontSize: "1.4em"
 });
 
 gsap.to(".paras", {
@@ -245,7 +245,7 @@ gsap.to("#secondProjectImage img", {
         scroller: "body",
         start: "top 70%",
         end: "bottom 40%",
-        scrub: 2,
+        scrub: 1,
     }
 })
 

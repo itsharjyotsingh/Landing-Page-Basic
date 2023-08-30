@@ -43,10 +43,11 @@ body {
     position: relative;
     background-color: #080808;
     color:antiquewhite;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     width: 100%;
     height: 100vh;
     z-index: 99;
+    /* border: 1px solid white ; */
 }
 
 #mainContent {
@@ -59,23 +60,23 @@ body {
 
 .coverName {
     position: absolute;
-    top: 50px;
-    font-size: 140px;
+    top: 3.125rem;
+    font-size: 8.75rem;
     opacity: 0;
 }
 
 .coverTitle {
     position: absolute;
-    top: 250px;
+    top: 15rem;
     font-weight: 300;
-    font-size: 100px;
+    font-size: 6.25rem;
     opacity: 0;
 }
 
 .first {
     position: absolute;
     right: 2%;
-    bottom: 0%;
+    bottom: 2%;
     font-size: 120px;
     opacity: 0;
     overflow: hidden;
@@ -85,7 +86,7 @@ body {
     position: absolute;
     font-size: 120px;
     right: 2%;
-    bottom: 20%;
+    bottom: 25%;
     opacity: 0;
     overflow: hidden;
 }
@@ -94,7 +95,7 @@ body {
     position: absolute;
     font-size: 120px;
     right: 2%;
-    bottom: 40%;
+    bottom: 45%;
     opacity: 0;
     overflow: hidden;
 }
@@ -103,7 +104,7 @@ body {
     position: absolute;
     font-size: 120px;
     right: 2%;
-    top: 0%;
+    top: 2%;
     opacity: 0;
     overflow: hidden;
 }
@@ -170,13 +171,15 @@ body {
 }
 
 #stickyDiv .one {
-    position: relative;
-    z-index: 9;
+    position: absolute;
+    left: 4%;
+    z-index: 99;
 }
 
 #stickyDiv .two {
-    position: relative;
-    z-index: 9;
+    position: absolute;
+    right: 4%;
+    z-index: 99;
 }
 
 #imageSpace {
@@ -219,7 +222,7 @@ body {
 }
 
 #top p {
-    margin: 0;
+    margin: 30px 0;
 }
 
 #projectsSection {
