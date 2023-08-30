@@ -93,8 +93,63 @@
 
     .firstProject,
     .secondProject {
-        height: 30%;
-        border: 1px solid green;
+        height: 70%;
+        padding: 20px 0;
         color: white;
+    }
+
+    #hobbiesWrapperDiv {
+        width: 90%;
+    }
+
+    #hobbyImage {
+        display: none;
+    }
+
+    .firstHobby {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    #hobbieEnd {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #para {
+        width: 100%;
+    }
+
+    #para #thisone {
+        font-size: 1.8rem;
+    }
+
+    #lastSection {
+        margin-top: 200px;
+    }
+
+    #wrapper {
+        width: 100%;
+    }
+
+    #topSection h4 {
+        width: 200;
+        font-size: 1rem;
+    }
+
+    #emailAdress {
+        font-size: 2rem;
+    }
+
+    #endSection {
+        margin: 100px 0 10px 0;
+    }
+
+    #socials {
+        display: none;
+    }
+
+    #endSection p {
+        font-size: 1rem;
     }
 }
