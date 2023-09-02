@@ -305,3 +305,40 @@ gsap.to(["#games", "#thisone"], {
         })
     }
 })
+
+
+// Click handlers ****************************************************************************************************
+
+
+document.querySelector("#moreAboutMeClick").addEventListener("click", () => {
+    tl
+        .to("#blackClickCover", {
+            y: "-100%",
+        })
+        .to("#blackClickCover", {
+            backgroundColor: "#080808",
+        })
+
+        .to("#aboutme", {
+            opacity: 1,
+            onstart: function () {
+                $("#aboutme").textillate({
+                in: {
+                        effect: 'fadeInUp',
+                        callback: function () {
+                            $("#aboutme").textillate('out');
+                        }
+                    },
+                    out: {
+                        effect: 'flipOutY'
+                    }
+                })
+            }
+        })
+        .to("#blackClickCover", {
+            delay: 2.5,
+            duration: 1,
+            y: "100%",
+        })
+        
+})

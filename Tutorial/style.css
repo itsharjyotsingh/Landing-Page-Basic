@@ -21,6 +21,24 @@ body {
     /* Firefox */
 }
 
+#blackClickCover {
+    width: 100vw;
+    position: fixed;
+    top: 100%;
+    background-color: #e1dfdd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    height: 100vh;
+}
+
+#blackClickCover #aboutme {
+    font-size: 64px;
+    color: antiquewhite;
+    opacity: 0;
+}
+
 .border1 {
     border:1px solid black;
 }
