@@ -1,0 +1,38 @@
+#aboutMePage {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: #e1dfdd;
+}
+
+#homePageLink {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+
+#forAboutMyselfWrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#aboutMyselfWrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 42px;
+}
+
+.flex {
+    display: flex;
+}
+
+#myName {
+    opacity: 0;
+}
+
+#aboutMyselfWrapper img {
+    background-color: #000;
+    height: 0px;
+    width: 300px;
+}

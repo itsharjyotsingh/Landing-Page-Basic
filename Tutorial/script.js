@@ -2,7 +2,7 @@
 
 var tl = gsap.timeline();
 
-    tl
+tl
     .to(".coverName", {
         opacity: 1,
         onStart: function () {
@@ -24,40 +24,40 @@ var tl = gsap.timeline();
             });
         }
     })
-    
+
     .to(".first", {
         opacity: 1,
-    onStart: function () {
+        onStart: function () {
             $(".first").textillate({
-            in: {
-                effect: 'fadeInUp',
-                callback: function () {
-                    $(".first").textillate('out');
+                in: {
+                    effect: 'fadeInUp',
+                    callback: function () {
+                        $(".first").textillate('out');
+                    }
+                },
+                out: {
+                    effect: 'fadeOutUp'
                 }
-            },
-            out: {
-                effect: 'fadeOutUp'
-            }
-        });
-    }
-})
+            });
+        }
+    })
 
     .to(".second", {
-    opacity: 1,
-    delay: 0.8,
-    onStart: function () {
-        $(".second").textillate({
-            in: {
-                effect: 'fadeInUp',
-                callback: function () {
-                    $(".second").textillate('out');
+        opacity: 1,
+        delay: 0.8,
+        onStart: function () {
+            $(".second").textillate({
+                in: {
+                    effect: 'fadeInUp',
+                    callback: function () {
+                        $(".second").textillate('out');
+                    }
+                },
+                out: {
+                    effect: 'fadeOutUp'
                 }
-            },
-            out: {
-                effect: 'fadeOutUp'
-            }
-        });
-    }
+            });
+        }
     })
 
     .to(".third", {
@@ -89,20 +89,20 @@ var tl = gsap.timeline();
             });
         }
     })
-    
-        .to([".coverName", ".coverTitle", ".fourth"], {
-            delay: 0.4,
-            opacity: 0,
+
+    .to([".coverName", ".coverTitle", ".fourth"], {
+        delay: 0.4,
+        opacity: 0,
     })
 
     .to("#cover", {
         y: "-100%",
         duration: 0.4
     })
-        
-        .to("#mainTextContainer", {
-            height: "100%",
-            duration: 0.1
+
+    .to("#mainTextContainer", {
+        height: "100%",
+        duration: 0.1
     })
 
     .to([".navLinks", ".creativeHeadline", ".developerHeadline"], {
@@ -130,55 +130,55 @@ var tl = gsap.timeline();
     })
 
 
-tl.to(["#firstProjectName", "#firstProjectDetails"],    {
-        opacity: 1,
-        onStart: function () {
-            $("#firstProjectName").textillate({
-                in: {
-                    effect: "fadeInUp",
-                    delayScale: 0.3
-                },
-            });
+tl.to(["#firstProjectName", "#firstProjectDetails"], {
+    opacity: 1,
+    onStart: function () {
+        $("#firstProjectName").textillate({
+            in: {
+                effect: "fadeInUp",
+                delayScale: 0.3
+            },
+        });
 
-            $("#firstProjectDetails").textillate({
-                in: {
-                    effect: "fadeInUp",
-                    delayScale: 0.3
-                }
-            });
-        },
-        scrollTrigger: {
-            trigger: ".firstProject",
-            scroller: "body",
-            start: "top 40%",
-            end: "bottom 20%",
-        }
-    });
+        $("#firstProjectDetails").textillate({
+            in: {
+                effect: "fadeInUp",
+                delayScale: 0.3
+            }
+        });
+    },
+    scrollTrigger: {
+        trigger: ".firstProject",
+        scroller: "body",
+        start: "top 40%",
+        end: "bottom 20%",
+    }
+});
 
 tl.to(["#secondProjectName", "#secondProjectDetails"], {
-        opacity: 1,
-        onStart: function () {
-            $("#secondProjectName").textillate({
-                in: {
-                    effect: "fadeInUp",
-                    delayScale: 0.3
-                },
-            });
+    opacity: 1,
+    onStart: function () {
+        $("#secondProjectName").textillate({
+            in: {
+                effect: "fadeInUp",
+                delayScale: 0.3
+            },
+        });
 
-            $("#secondProjectDetails").textillate({
-                in: {
-                    effect: "fadeInUp",
-                    delayScale: 0.3
-                }
-            });
-        },
-        scrollTrigger: {
-            trigger: ".secondProject",
-            scroller: "body",
-            start: "top 40%",
-            end: "bottom 20%"
-        }
-    });
+        $("#secondProjectDetails").textillate({
+            in: {
+                effect: "fadeInUp",
+                delayScale: 0.3
+            }
+        });
+    },
+    scrollTrigger: {
+        trigger: ".secondProject",
+        scroller: "body",
+        start: "top 40%",
+        end: "bottom 20%"
+    }
+});
 
 // Scroll Trigger ****************************************************************************************************
 
@@ -306,7 +306,6 @@ gsap.to(["#games", "#thisone"], {
     }
 })
 
-
 // Click handlers ****************************************************************************************************
 
 
@@ -322,8 +321,13 @@ document.querySelector("#moreAboutMeClick").addEventListener("click", () => {
         .to("#aboutme", {
             opacity: 1,
             onstart: function () {
+
+                document.querySelector("#aboutMePage").classList.remove('none');
+                // document.querySelector("#aboutMePage").classList.add('flex');
+
+                document.querySelector("#stickyContainer").classList.toggle("none");
                 $("#aboutme").textillate({
-                in: {
+                    in: {
                         effect: 'fadeInUp',
                         callback: function () {
                             $("#aboutme").textillate('out');
@@ -335,10 +339,69 @@ document.querySelector("#moreAboutMeClick").addEventListener("click", () => {
                 })
             }
         })
+
         .to("#blackClickCover", {
             delay: 2.5,
             duration: 1,
             y: "100%",
         })
+    
+        .to(["#myName", "#myImage"], {
+            height: "450px",
+            opacity: 1,
+            duration: 0.4,
+            onstart: function () {
+                $("#myName").textillate({
+                    in: {
+                        effect: 'flipInY',
+                    }
+                })
+            }
+        })
+})
+
+document.querySelector("#homePageLink").addEventListener("click", () => {
+
+    document.querySelector("#aboutme").textContent = "Home Page"
+
+    tl
+        .to("#blackClickCover", {
+            y: "-100%",
+        })
         
+        .to("#blackClickCover", {
+            backgroundColor: "#080808",
+        })
+
+        .to("#aboutMePage", {
+            top: "0%",
+        })
+
+        .to("#aboutme", {
+            opacity: 1,
+            onstart: function () {
+
+                document.querySelector("#aboutMePage").classList.add('none');
+        
+                document.querySelector("#stickyContainer").classList.toggle("none");
+
+                $("#aboutme").textillate({
+                    in: {
+                        effect: 'fadeInUp',
+                        callback: function () {
+                            $("#aboutme").textillate('out');
+                        }
+                    },
+                    out: {
+                        effect: 'flipOutY'
+                    }
+                })
+            }
+        })
+
+        .to("#blackClickCover", {
+            delay: 2.5,
+            duration: 1,
+            y: "100%",
+        })
 })

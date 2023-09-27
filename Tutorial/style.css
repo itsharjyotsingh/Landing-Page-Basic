@@ -53,6 +53,7 @@ body {
 
 #stickyContainer {
     position: relative;
+    /* top: 100%; */
     background-color: #e1dfdd;
     /* height: 100%; */
 }
@@ -152,7 +153,6 @@ body {
     top: 2%;
     left: 5%;
     display: flex;
-    background-color: #e1dfdd;
     justify-content: space-between;
 }
 
@@ -188,17 +188,17 @@ body {
     width: fit-content;
 }
 
-#stickyDiv .one {
+/* #stickyDiv .one {
     position: absolute;
     left: 4%;
     z-index: 99;
-}
+} */
 
-#stickyDiv .two {
+/* #stickyDiv .two {
     position: absolute;
     right: 4%;
     z-index: 99;
-}
+} */
 
 #imageSpace {
     position: relative;
@@ -410,4 +410,8 @@ body {
     margin: 0;
     font-size: 26px;
     padding: 0;
+}
+
+.none {
+    display: none;
 }
