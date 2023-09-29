@@ -309,6 +309,21 @@ gsap.to(["#games", "#thisone"], {
 // Click handlers ****************************************************************************************************
 
 
+var text1 = $("#aboutme").textillate({
+    in: {
+        effect: 'fadeInUp',
+        callback: function () {
+            $("#aboutme").textillate('out');
+        }
+    },
+    out: {
+        effect: 'flipOutY'
+    },
+    type: "char",
+    autoStart: "false"
+})
+
+
 document.querySelector("#moreAboutMeClick").addEventListener("click", () => {
     tl
         .to("#blackClickCover", {
@@ -320,23 +335,14 @@ document.querySelector("#moreAboutMeClick").addEventListener("click", () => {
 
         .to("#aboutme", {
             opacity: 1,
-            onstart: function () {
+            function () {
 
                 document.querySelector("#aboutMePage").classList.remove('none');
-                // document.querySelector("#aboutMePage").classList.add('flex');
+                document.querySelector("#homePageLink").classList.remove('none');
 
                 document.querySelector("#stickyContainer").classList.toggle("none");
-                $("#aboutme").textillate({
-                    in: {
-                        effect: 'fadeInUp',
-                        callback: function () {
-                            $("#aboutme").textillate('out');
-                        }
-                    },
-                    out: {
-                        effect: 'flipOutY'
-                    }
-                })
+                
+                text1.textillate('in');
             }
         })
 
@@ -346,8 +352,7 @@ document.querySelector("#moreAboutMeClick").addEventListener("click", () => {
             y: "100%",
         })
     
-        .to(["#myName", "#myImage"], {
-            height: "450px",
+        .to("#myName", {
             opacity: 1,
             duration: 0.4,
             onstart: function () {
@@ -357,6 +362,13 @@ document.querySelector("#moreAboutMeClick").addEventListener("click", () => {
                     }
                 })
             }
+        })
+
+        .to("#myImage", {
+            height: "450px",
+            opacity: 1,
+            duration: 0.4,
+            delay: -0.4,
         })
 })
 
@@ -379,23 +391,15 @@ document.querySelector("#homePageLink").addEventListener("click", () => {
 
         .to("#aboutme", {
             opacity: 1,
-            onstart: function () {
+            function () {
 
                 document.querySelector("#aboutMePage").classList.add('none');
+
+                document.querySelector("#homePageLink").classList.add('none');
         
                 document.querySelector("#stickyContainer").classList.toggle("none");
-
-                $("#aboutme").textillate({
-                    in: {
-                        effect: 'fadeInUp',
-                        callback: function () {
-                            $("#aboutme").textillate('out');
-                        }
-                    },
-                    out: {
-                        effect: 'flipOutY'
-                    }
-                })
+            
+                text1.textillate('in');
             }
         })
 

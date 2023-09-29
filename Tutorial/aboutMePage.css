@@ -1,7 +1,8 @@
 #aboutMePage {
     margin-top: 150px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: #e1dfdd;
 }
 
@@ -12,14 +13,14 @@
 }
 
 #forAboutMyselfWrapper {
-    display: flex;
-    justify-content: center;
+    width: 75%;
 }
 
 #aboutMyselfWrapper {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 42px;
 }
 
@@ -32,7 +33,9 @@
 }
 
 #aboutMyselfWrapper img {
-    background-color: #000;
     height: 0px;
-    width: 300px;
+    object-fit: contain;
+    width: 400px;
+    filter: grayscale(0.4);
+    border-radius: 200px;
 }
